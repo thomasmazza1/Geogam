@@ -6,7 +6,7 @@
 
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { auth, firestore } from "../../../config/firebase-config.js";
+import { auth, db } from "../../config/firebase-config.js";
 import { missions } from "../../data/missions.js";
 
 const registrationForm = document.getElementById("registrationForm");
@@ -72,7 +72,7 @@ if (!registrationForm) {
                     };
 
                     // Guarda el nuevo documento de usuario en Cloud Firestore
-                    setDoc(doc(firestore, 'users', user.uid), newUserDoc)
+                    setDoc(doc(db, 'users', user.uid), newUserDoc)
                         .then(() => {
                             window.location.href = "login.html";
                         })
