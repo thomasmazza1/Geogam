@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territorios - World Dominator</title>
+    <link rel="stylesheet" href="../../../styles/styles.css">
+</head>
+<body>
+    <div class="game-background">
+        <!-- El botón de volver ahora tiene la clase in-game para posicionarlo correctamente -->
+        <a href="niveles.html" class="btn-volver in-game">
+            <img src="/public/images/boton-salir.webp" alt="Volver">
+        </a>
+
+        <div class="game-header-info">
+            <div class="timer-container-game">
+                <img src="/public/images/reloj_icono.webp" alt="Tiempo">
+                <span id="timer">15s</span>
+            </div>
+        </div>
+
+        <div class="game-content-wrapper" id="contenedor-territorios">
+
+            <div class="game-body-territories">
+                <!-- El enunciado de la pregunta -->
+                <div id="pregunta-enunciado" class="game-title">Cargando...</div>
+
+                <!-- Contenedor para la imagen del territorio -->
+                <div class="territory-image-container">
+                    <img id="pregunta-imagen" src="" alt="Territorio a identificar">
+                </div>
+
+                <!-- Contenedor para las opciones de respuesta -->
+                <div id="opciones-container" class="opciones-wrapper">
+                    <!-- Las opciones se generan dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script específico del juego de Territorios -->
+    <script src="/backend/functions/game/territorios.js" type="module"></script>
+</body>
+</html>

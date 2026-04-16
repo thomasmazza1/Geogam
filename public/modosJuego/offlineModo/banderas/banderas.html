@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la Bandera - World Dominator</title>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+</head>
+<body>
+    <div class="container-banderas">
+        <a href="../offline-mode.html" class="btn-volver">
+            <img src="/public/images/boton-salir.webp" alt="Volver">
+        </a>
+    </div>
+    <div id="juego-container" style="display: none;">
+        <div class="game-background">
+            <a href="niveles-banderas.html" class="btn-volver in-game">
+                <img src="/public/images/boton-salir.webp" alt="Volver">
+            </a>
+
+            <div class="game-header-info">
+                <div class="timer-container-game">
+                    <img src="/public/images/reloj_icono.webp" alt="Tiempo">
+                    <span id="timer">500s</span>
+                </div>
+            </div>
+            <div class="game-content-wrapper" id="contenedor-banderas">
+
+                <div class="game-body-flags">
+                    <div class="game-title" id="game-title-flags">ADIVINA LA BANDERA</div>
+                    <div class="flag-image-container">
+                        <img id="bandera-imagen" src="" alt="Bandera">
+                    </div>
+                    <div id="opciones-container" class="opciones-wrapper">
+                        <!-- Opciones generadas por JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/backend/functions/game/banderas.js" type="module"></script>
+</body>
+</html>
